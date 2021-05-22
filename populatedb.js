@@ -5,7 +5,8 @@ const mongoose = require('mongoose');
 const User = require('./models/User');
 
 // la URI de la db
-const db = 'mongodb://localhost/hellodb';
+const db = 'mongodb+srv://hellodb:hellodb-velezcapo@cluster0.mas2j.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+// const db = 'mongodb://localhost/hellodb';
 
 // array de usuarios para ingresar a la db
 const users = [
@@ -37,7 +38,7 @@ const users = [
 
 // conectarse a la db
 mongoose.set('useUnifiedTopology', true);
-mongoose.set('useFindAndModify' ,false);
+mongoose.set('useFindAndModify', false);
 mongoose
     .connect(db, { useNewUrlParser: true })
     .then(() => {
